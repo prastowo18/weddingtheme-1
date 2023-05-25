@@ -31,7 +31,7 @@ export function BrideGroom() {
             asperiores accusamus doloremque?"
           />
           <div className="grid w-full grid-cols-1 gap-10 py-20 md:grid-cols-2 md:px-10 lg:px-20">
-            <div className="flex flex-col items-center justify-center gap-5 px-5">
+            <div className="flex flex-col items-center justify-center gap-5 px-5" data-aos="zoom-in">
               <div className="">
                 <Image
                   src="/assets/groom1.png"
@@ -56,7 +56,7 @@ export function BrideGroom() {
                 </h5>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center gap-5 px-5">
+            <div className="flex flex-col items-center justify-center gap-5 px-5" data-aos="zoom-in" data-aos-delay="300">
               <div className="rounded-full shadow-lg">
                 <Image
                   src="/assets/groom1.png"

@@ -17,7 +17,7 @@ export function Hero() {
           }}
         >
           <div className="flex items-center justify-center w-full h-full bg-black/50 py-80 md:py-[23rem]">
-            <div className="text-center lg:-mt-10">
+            <div className="text-center lg:-mt-10" data-aos="fade-up">
               <span className="text-gray-200 uppercase tracking-[0.4rem]">
                 Pernikahan
               </span>
