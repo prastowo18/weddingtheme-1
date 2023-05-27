@@ -19,7 +19,7 @@ import 'aos/dist/aos.css';
 export default function Home() {
   const [welcomeInvitation, setWelcomeInvitation] = useState<boolean>(true);
   const musicPlayers = useRef<HTMLAudioElement | undefined>(
-    typeof Audio !== "undefined" ? new Audio("/assets/song.mp3") : undefined
+    typeof Audio !== "undefined" ? new Audio("/assets/song_fix.mp3") : undefined
   );
   const [playing, setPlaying] = useState<boolean>(false);
 
