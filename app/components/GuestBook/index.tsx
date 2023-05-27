@@ -1,8 +1,50 @@
-import React, { useMemo } from "react";
-
+import React, { useCallback, useMemo } from "react";
+import useGetList from '../../hooks/useGetList'
+import useCeateList from '../../hooks/useCeateList'
 import SectionTitle from "../SectionTitle";
+import { useForm } from "react-hook-form";
+import { useSearchParams } from "next/navigation";
+import moment from "moment";
 
 export function GuestBook() {
+  const searchParams = useSearchParams();
+  const paramsName = searchParams.get('name');
+  const mutation = useCeateList()
+  const dataTable = useGetList()
+  const { data, isError, isFetching, isLoading, refetch } = dataTable
+  const showButton = data?.data.find((x: any) => x.name === paramsName)
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    reset,
+    watch,
+    formState: { errors }
+  } = useForm<any>({
+    defaultValues: {}
+  })
+
+  const onSubmit = useCallback(
+    (val: any) => {
+      val.kedatangan = val.kedatangan === 'Hadir' ? true : false
+      mutation.mutate(
+        {
+          ...val
+        },
+        {
+          onSuccess(data: any) {
+            if (data) {
+              refetch()
+            }
+          },
+          onError(err: any) {
+            console.log('err>>response>>submit', err)
+          }
+        }
+      )
+    }, []
+  )
+
   const renderMain = useMemo(() => {
     return (
       <>
@@ -18,7 +60,7 @@ export function GuestBook() {
           asperiores accusamus doloremque?"
           />
 
-          <form className="w-full p-5 mt-10 md:p-16 bg-[#9AA977]/60 rounded-md md:w-2/3 lg:w-1/2 shadow-md ">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full p-5 mt-10 md:p-16 bg-[#9AA977]/60 rounded-md md:w-2/3 lg:w-1/2 shadow-md">
             <div className="mb-4">
               <label className="block mb-1 font-semibold text-white">
                 Nama
@@ -27,7 +69,9 @@ export function GuestBook() {
                 className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                 id="nama"
                 type="text"
-                // placeholder="Nama"
+                value={paramsName ?? ''}
+                {...register('nama', {})}
+              // placeholder="Nama"
               />
             </div>
             <div className="">
@@ -36,7 +80,9 @@ export function GuestBook() {
                   Kedatangan
                 </label>
                 <div className="relative inline-block w-full">
-                  <select className="block w-full px-4 py-2 pr-8 leading-tight bg-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+                  <select
+                    {...register('kedatangan', {})}
+                    className="block w-full px-4 py-2 pr-8 leading-tight bg-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
                     <option>Hadir</option>
                     <option>Tidak Hadir</option>
                   </select>
@@ -59,7 +105,8 @@ export function GuestBook() {
                   className="w-full px-3 py-2 leading-tight border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                   id="nama"
                   type="number"
-                  // placeholder="Nama"
+                  {...register('jumlah', {})}
+                // placeholder="Nama"
                 />
               </div>
             </div>
@@ -70,48 +117,48 @@ export function GuestBook() {
               <textarea
                 className="w-full h-32 px-3 py-2 leading-tight border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                 id="nama"
-                // placeholder="Nama"
+                {...register('ucapan', {})}
+              // placeholder="Nama"
               />
             </div>
-            <button
-              className="px-7 py-2 bg-[#9AA977]/80 text-white border-2 border-white/80 rounded-lg text-sm hover:bg-white hover:text-[#9AA977]/80 hover:border-2 hover:border-[#9AA977]/80 transition duration-150 ease-in-out cursor-pointer uppercase"
-              type="submit"
-            >
-              Kirim
-            </button>
+            {showButton &&
+              <button
+                className="px-7 py-2 bg-[#9AA977]/80 text-white border-2 border-white/80 rounded-lg text-sm hover:bg-white hover:text-[#9AA977]/80 hover:border-2 hover:border-[#9AA977]/80 transition duration-150 ease-in-out cursor-pointer uppercase"
+                type="submit"
+              >
+                Kirim
+              </button>
+            }
           </form>
           <div className="relative w-full p-5 mt-12 border-y-2 border-y-[#9AA977]/80 rounded-lg shadow-md md:w-2/3 lg:w-1/2 overflow-auto">
             <div className="relative flex flex-col w-full mx-auto overflow-y-auto h-72 scrollbar-thin scrollbar-thumb-[#9AA977]/60 scrollbar-track-[#9AA977]/30 px-5">
-              {Array(5)
-                .fill(undefined)
-                .map((item: any, idx: number) => (
-                  <div className="pb-5" key={idx}>
-                    <div className="flex flex-col p-4 bg-[#9AA977]/20 rounded-lg">
-                      <div className="flex flex-col md:gap-3 md:flex-row md:items-center">
-                        <p className="text-sm font-semibold">
-                          Prastowo Adi Nugroho
-                        </p>
-                        <div className="text-xs font-semibold text-red-500 md:px-4 md:py-1 md:text-center md:bg-white md:rounded-full">
-                          Tidak Hadir
-                        </div>
+              {data?.data.map((item: any, idx: number) => (
+                <div className="pb-5" key={idx}>
+                  <div className="flex flex-col p-4 bg-[#9AA977]/20 rounded-lg">
+                    <div className="flex flex-col md:gap-3 md:flex-row md:items-center">
+                      <p className="text-sm font-semibold">
+                        {item.nama}
+                      </p>
+                      <div className="text-xs font-semibold text-red-500 md:px-4 md:py-1 md:text-center md:bg-white md:rounded-full">
+                        {item.kedatangan ? 'Hadir' : 'Tidak Hadir'}
                       </div>
-                      <p className="mt-2 text-xs md:text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quidem sequi, adipisci cupiditate laborum
-                        consequatur suscipit?
-                      </p>
-                      <p className="mt-3 text-xs text-gray-500">
-                        22 Januari 2023 09:36
-                      </p>
                     </div>
+                    <p className="mt-2 text-xs md:text-sm">
+                      {item.ucapan}
+                    </p>
+                    <p className="mt-3 text-xs text-gray-500">
+                      {/* 22 Januari 2023 09:36 */}
+                      {moment(item?.createdAt).format('DD MMM YYYY HH:mm')}
+                    </p>
                   </div>
-                ))}
+                </div>
+              ))}
             </div>
           </div>
         </section>
       </>
     );
-  }, []);
+  }, [data]);
 
   return renderMain;
 }
