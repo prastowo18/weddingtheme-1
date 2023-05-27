@@ -13,7 +13,8 @@ const gabriela = Gabriela({
   subsets: ["latin"],
 });
 
-export function BrideGroom() {
+export function BrideGroom(props: any) {
+  const { data } = props
   const renderMain = useMemo(() => {
     return (
       <>
@@ -43,16 +44,16 @@ export function BrideGroom() {
               </div>
               <div className="p-5 text-center">
                 <h4 className={`${mrDehaviland.className} text-5xl mb-2`}>
-                  Levi
+                  {data.groom.name}
                 </h4>
                 <h5 className={`${gabriela.className} text-lg font-semibold`}>
-                  Levi Ackerman
+                  {data.groom.fullname}
                 </h5>
                 <h5 className={`${gabriela.className} text-sm mt-2`}>
-                  Lorem ipsum - Dolor sit amet
+                  {data.groom.desc}
                 </h5>
                 <h5 className={`${gabriela.className} text-sm mt-1`}>
-                  📍 Jakarta, Indonesia.
+                  📍 {data.groom.location}
                 </h5>
               </div>
             </div>
@@ -68,16 +69,16 @@ export function BrideGroom() {
               </div>
               <div className="p-5 text-center">
                 <h4 className={`${mrDehaviland.className} text-5xl mb-2`}>
-                  Mikasa
+                  {data.bride.name}
                 </h4>
                 <h5 className={`${gabriela.className} text-lg font-semibold`}>
-                  Mikasa Ackerman
+                  {data.bride.fullname}
                 </h5>
                 <h5 className={`${gabriela.className} text-sm mt-2`}>
-                  Lorem ipsum - Dolor sit amet
+                  {data.bride.desc}
                 </h5>
                 <h5 className={`${gabriela.className} text-sm mt-1`}>
-                  📍 Bandung, Indonesia.
+                  📍 {data.bride.location}
                 </h5>
               </div>
             </div>

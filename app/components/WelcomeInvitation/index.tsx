@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-
+import { useSearchParams } from "next/navigation";
 import { Gabriela } from "next/font/google";
 import Image from "next/image";
 
@@ -10,9 +10,12 @@ const gabriela = Gabriela({
 
 interface IProps {
   toggleWelcomeInvitation: () => void;
+  data: any
 }
 export function WelcomeInvitation(props: IProps) {
-  const { toggleWelcomeInvitation } = props;
+  const searchParams = useSearchParams();
+  const paramsName = searchParams.get('name');
+  const { toggleWelcomeInvitation, data } = props;
   const renderMain = useMemo(() => {
     return (
       <>
@@ -39,16 +42,16 @@ export function WelcomeInvitation(props: IProps) {
                 <h1
                   className={`text-4xl md:text-7xl text-white ${gabriela.className}`}
                 >
-                  Windi & Aris
+                  {data.name}
                 </h1>
-                <h2 className="text-lg text-white">18 Februari 2028</h2>
+                <h2 className="text-lg text-white">{data.date}</h2>
               </div>
               <div className="">
                 <h2 className="text-base italic text-white">Dear</h2>
                 <h1
                   className={`text-xl font-semibold text-white ${gabriela.className}`}
                 >
-                  Prastowo Adi
+                  {paramsName}
                 </h1>
               </div>
               <h2 className="px-2 text-base text-white">

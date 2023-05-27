@@ -41,10 +41,77 @@ export default function Home() {
     };
   }, []);
 
+  const data = {
+    "header": {
+      "name": "Zein & Wiwi",
+      "date": "15 Juli 2023"
+    },
+    "bride_and_groom": {
+      "desc": "",
+      "groom": {
+        "name": "Zein",
+        "fullname": "Muhammad Zein",
+        "desc": "Bapak M.Sjahlan - Ibu Rosminah",
+        "location": "Jakarta, Indonesia."
+      },
+      "bride": {
+        "name": "Wiwi",
+        "fullname": "Wiwi Fitriani",
+        "desc": "Alm. Bapak Saepudin - Ibu Rusminah",
+        "location": "Jakarta, Indonesia."
+      }
+    },
+    "countdown": {
+      "desc": "",
+      "date": "",
+      "background": "",
+      "akad": {
+        "location_name": "Gedung Serba Guna MCB Jati Asih",
+        "location": "Jl. Koja I, RT.02/RW.016, Jatiasih, Kec. Jatiasih, Kota Bks, Jawa Barat",
+        "location_link": "https://www.google.com/maps/place/Gedung+Serba+Guna+MCB+Jati+Asih/@-6.3061877,106.9545013,16.84z/data=!4m6!3m5!1s0x2e6993dd7c6cb143:0xc796d4f1f9d3d3f4!8m2!3d-6.3062138!4d106.9573124!16s%2Fg%2F11t6_kf9w4?entry=ttu",
+        "date": "Sabtu, 15 Juli 2023 Jam 08.00-10.00"
+      },
+      "resepsi": {
+        "location_name": "Gedung Serba Guna MCB Jati Asih",
+        "location": "Jl. Koja I, RT.02/RW.016, Jatiasih, Kec. Jatiasih, Kota Bks, Jawa Barat",
+        "location_link": "https://www.google.com/maps/place/Gedung+Serba+Guna+MCB+Jati+Asih/@-6.3061877,106.9545013,16.84z/data=!4m6!3m5!1s0x2e6993dd7c6cb143:0xc796d4f1f9d3d3f4!8m2!3d-6.3062138!4d106.9573124!16s%2Fg%2F11t6_kf9w4?entry=ttu",
+        "date": "Sabtu, 15 Juli 2023 Jam 11.00-17.00"
+      },
+      "link_live_streaming": "",
+      "live_streaming_status": false
+    },
+    "our_love_story": {
+      "desc": "",
+      "image": "",
+      "title": "",
+      "date": "",
+      "story": ""
+    },
+    "our_moment": {
+      "desc": "",
+      "main_image": "",
+      "list_image": []
+    },
+    "share_love": {
+      "desc": "",
+      "list_bank": [
+        {
+          "logo": "/assets/mandirilogo.png",
+          "rek_number": "1650001333757",
+          "bank_name": "Bank Mandiri",
+          "name": "Wiwi Fitriani",
+          "no_tlpn": "089668695521"
+        }
+      ],
+      "send_gift_location": "Kp. Pondok Benda Rt.05/Rw.04 No.29 gg Apotik K24, Belakang Rumah RW Didi"
+    }
+  }
+
   return (
     <main className="min-h-screen">
       {welcomeInvitation ? (
         <WelcomeInvitation
+          data={data.header}
           toggleWelcomeInvitation={() => {
             setWelcomeInvitation(!welcomeInvitation);
             setPlaying(!playing);
@@ -53,13 +120,13 @@ export default function Home() {
       ) : (
         <div className="relative">
           <Navbar />
-          <Hero />
+          <Hero data={data.header} />
           <Notes />
-          <BrideGroom />
-          <CountdownDay />
+          <BrideGroom data={data.bride_and_groom} />
+          <CountdownDay data={data.countdown} />
           <OurLoveStory />
           <OurMoment />
-          <ShareLove />
+          <ShareLove data={data.share_love} />
           <GuestBook />
           <Footer />
           <div className="fixed z-50 bottom-28 md:bottom-5 right-5">

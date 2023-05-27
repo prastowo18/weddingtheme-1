@@ -6,7 +6,8 @@ const gabriela = Gabriela({
   subsets: ["latin"],
 });
 
-export function Hero() {
+export function Hero(props: any) {
+  const { data } = props
   const renderMain = useMemo(() => {
     return (
       <header className={`${gabriela.className}`} id="hero">
@@ -22,9 +23,9 @@ export function Hero() {
                 Pernikahan
               </span>
               <h1 className="text-4xl font-bold tracking-widest text-gray-100 lg:text-5xl">
-                Windi & Aris
+                {data.name}
               </h1>
-              <p className="max-w-3xl text-lg text-gray-300">31-01-2027</p>
+              <p className="max-w-3xl text-lg text-gray-300">{data.date}</p>
             </div>
           </div>
         </div>
