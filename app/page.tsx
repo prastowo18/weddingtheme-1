@@ -13,6 +13,8 @@ import {
   Footer,
   WelcomeInvitation,
 } from "./components";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
   const [welcomeInvitation, setWelcomeInvitation] = useState<boolean>(true);
@@ -27,6 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     playing ? musicPlayers.current?.play() : musicPlayers.current?.pause();
+    AOS.init();
   }, [playing]);
 
   useEffect(() => {
