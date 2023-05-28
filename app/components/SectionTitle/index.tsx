@@ -51,7 +51,7 @@ export function SectionTitle(props: IProps) {
             </h5>
           )}
 
-          <p className="text-sm font-light lg:px-20">{desc}</p>
+          <p className="text-sm font-light md:text-base lg:px-20">{desc}</p>
         </div>
       </div>
     );

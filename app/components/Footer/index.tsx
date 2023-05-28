@@ -35,16 +35,16 @@ export function Footer() {
           </div>
           <div className="z-50">
             <Image
-              src="/assets/qrcode.png"
+              src="/assets/logo6.png"
               alt="notes-img"
-              width={60}
-              height={60}
+              width={100}
+              height={100}
               // className="mx-auto"
             />
           </div>
           <div className="z-50">
-            <h5 className="text-sm font-semibold uppercase">InvitationMore</h5>
-            <h6 className="text-xs">Website Undangan Online</h6>
+            <h5 className="text-base font-semibold uppercase">Divory</h5>
+            <h6 className="text-sm">Digital Invitation Story</h6>
           </div>
         </footer>
       </>

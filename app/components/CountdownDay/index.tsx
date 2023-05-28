@@ -14,8 +14,8 @@ const gabriela = Gabriela({
 });
 
 export function CountdownDay(props: any) {
-  const { data } = props
-  const weedingDate = new Date("2023-06-21T00:00:00.147712+07:00").getTime();
+  const { data } = props;
+  const weedingDate = new Date("2023-07-15T08:00:00.147712+07:00").getTime();
 
   const renderMain = useMemo(() => {
     return (
@@ -83,7 +83,7 @@ export function CountdownDay(props: any) {
                       alt="notes-img"
                       width={50}
                       height={50}
-                    // className="mx-auto"
+                      // className="mx-auto"
                     />
                   </div>
                   <div className="text-[#9AA977]/80 p-1 text-left">
@@ -197,7 +197,7 @@ export function CountdownDay(props: any) {
                 </div>
               </div>
 
-              {data.live_streaming_status &&
+              {data.live_streaming_status && (
                 <div className="px-5 py-20 md:px-10 lg:px-16 text-[#9AA977]/80">
                   <h3 className={`${mrDehaviland.className} text-4xl`}>
                     Live Streaming
@@ -219,7 +219,7 @@ export function CountdownDay(props: any) {
                     <p>Join Live</p>
                   </button>
                 </div>
-              }
+              )}
             </div>
           </div>
         </section>

@@ -23,6 +23,8 @@ export function Navbar() {
                 width={40}
                 height={40}
                 className=""
+                loading="eager"
+                priority
               />
             </a>
             <a className="" href="#ourlovestory">
@@ -32,6 +34,8 @@ export function Navbar() {
                 width={40}
                 height={40}
                 className=""
+                loading="eager"
+                priority
               />
             </a>
             <a className="" href="#guestbook">
@@ -41,6 +45,8 @@ export function Navbar() {
                 width={40}
                 height={40}
                 className=""
+                loading="eager"
+                priority
               />
             </a>
             <a className="" href="#sharelove">
@@ -50,6 +56,8 @@ export function Navbar() {
                 width={40}
                 height={40}
                 className=""
+                loading="eager"
+                priority
               />
             </a>
           </div>

@@ -3,6 +3,7 @@ import React, { useMemo } from "react";
 import { Mr_De_Haviland, Gabriela } from "next/font/google";
 import Image from "next/image";
 import SectionTitle from "../SectionTitle";
+import { toast } from "react-toastify";
 
 const mrDehaviland = Mr_De_Haviland({
   weight: "400",
@@ -14,7 +15,7 @@ const gabriela = Gabriela({
 });
 
 export function ShareLove(props: any) {
-  const { data } = props
+  const { data } = props;
   const renderMain = useMemo(() => {
     return (
       <>
@@ -31,10 +32,10 @@ export function ShareLove(props: any) {
           />
 
           {/* Account Bank */}
-          <div className="grid w-full grid-cols-1 gap-5 py-10 md:w-5/6 md:grid-cols-2">
+          <div className="flex flex-col items-center justify-center w-full gap-5 py-10 md:flex-row md:w-5/6">
             {data.list_bank.map((item: any, idx: any) => (
               <div
-                className="px-5 bg-white rounded-md shadow-md py-7"
+                className="w-full px-5 bg-white rounded-md shadow-md py-7 md:w-1/2"
                 key={idx}
               >
                 <div className="">
@@ -54,9 +55,10 @@ export function ShareLove(props: any) {
                   <div className="flex gap-2">
                     <button
                       className="px-3 py-2 bg-[#9AA977]/80 text-white border-2 border-white/80 rounded-lg text-xs hover:bg-white hover:text-[#9AA977]/80 hover:border-2 hover:border-[#9AA977]/80 transition duration-150 ease-in-out cursor-pointer"
-                      onClick={() =>
-                        navigator.clipboard.writeText(`${item.no_tlpn}`)
-                      }
+                      onClick={() => {
+                        navigator.clipboard.writeText(`${item.rek_number}`);
+                        toast.success("Berhasil Copy No Rekening");
+                      }}
                     >
                       Copy
                     </button>
@@ -99,7 +101,15 @@ export function ShareLove(props: any) {
                   </p>
                 </div>
                 <div className="mx-auto lg:mx-0">
-                  <button className="px-3 py-2 bg-[#9AA977]/80 text-white border-2 border-white/80 rounded-lg text-xs hover:bg-white hover:text-[#9AA977]/80 hover:border-2 hover:border-[#9AA977]/80 transition duration-150 ease-in-out cursor-pointer">
+                  <button
+                    className="px-3 py-2 bg-[#9AA977]/80 text-white border-2 border-white/80 rounded-lg text-xs hover:bg-white hover:text-[#9AA977]/80 hover:border-2 hover:border-[#9AA977]/80 transition duration-150 ease-in-out cursor-pointer"
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        `${data.send_gift_location}`
+                      );
+                      toast.success("Berhasil Copy Alamat");
+                    }}
+                  >
                     Copy
                   </button>
                 </div>
