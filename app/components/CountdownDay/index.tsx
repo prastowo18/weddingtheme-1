@@ -122,9 +122,13 @@ export function CountdownDay(props: any) {
                   </h5>
                 </div>
                 <div className="flex gap-2 mt-10 text-[#9AA977]/80">
-                  <button className="px-2 py-2 md:px-3 text-xs md:text-sm border-2 border-[#9AA977]/80 rounded-lg hover:bg-[#9AA977]/80 hover:text-white hover:border-white transition duration-150 ease-in-out">
+                  <a
+                    className="px-2 py-2 md:px-3 text-xs md:text-sm border-2 border-[#9AA977]/80 rounded-lg hover:bg-[#9AA977]/80 hover:text-white hover:border-white transition duration-150 ease-in-out"
+                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Akad+Zein%26Wiwi&location=Gedung%20Serba%20Guna%20MCB%20Jati%20Asih&dates=20230715%54180000%2F20231231%54210000"
+                    target="_blank"
+                  >
                     Add To Calender
-                  </button>
+                  </a>
                   <a
                     href={data.akad.location_link}
                     className="px-2 py-2 md:px-3 text-xs md:text-sm border-2 border-[#9AA977]/80 rounded-lg hover:bg-[#9AA977]/80 hover:text-white hover:border-white transition duration-150 ease-in-out"
@@ -184,9 +188,13 @@ export function CountdownDay(props: any) {
                   </h5>
                 </div>
                 <div className="flex gap-2 mt-10 text-[#9AA977]/80">
-                  <button className="px-2 py-2 md:px-3 text-xs md:text-sm border-2 border-[#9AA977]/80 rounded-lg hover:bg-[#9AA977]/80 hover:text-white hover:border-white transition duration-150 ease-in-out">
+                  <a
+                    className="px-2 py-2 md:px-3 text-xs md:text-sm border-2 border-[#9AA977]/80 rounded-lg hover:bg-[#9AA977]/80 hover:text-white hover:border-white transition duration-150 ease-in-out"
+                    href="https://www.google.com/calendar/render?action=TEMPLATE&text=Wedding%20Reception+Zein%26Wiwi&location=Gedung%20Serba%20Guna%20MCB%20Jati%20Asih&dates=20230715%54180000%2F20231231%54210000"
+                    target="_blank"
+                  >
                     Add To Calender
-                  </button>
+                  </a>
                   <a
                     href={data.akad.location_link}
                     className="px-2 py-2 md:px-3 text-xs md:text-sm border-2 border-[#9AA977]/80 rounded-lg hover:bg-[#9AA977]/80 hover:text-white hover:border-white transition duration-150 ease-in-out"
