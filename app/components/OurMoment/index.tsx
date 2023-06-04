@@ -25,9 +25,7 @@ export function OurMoment() {
             withTitleDesc
             title="Our Moment"
             titleDesc="A Glimpse of"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            laborum voluptatum animi rerum alias nulla architecto unde
-            asperiores accusamus doloremque?"
+            desc="Beberapa dari moment kami yang telah diabadikan"
           />
           <LightGallery
             speed={500}

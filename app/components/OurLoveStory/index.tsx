@@ -19,9 +19,7 @@ export function OurLoveStory(props: IProps) {
           <SectionTitle
             withImg
             title="Our Love Story"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            laborum voluptatum animi rerum alias nulla architecto unde
-            asperiores accusamus doloremque?"
+            desc="Berikut ialah perjalanan kisah cinta kamu dari awal bertemu hingga kini memutuskan ke jenjang lebih serius"
           />
           <div className="flex flex-col w-full pt-20 pb-20 md:pb-32 md:px-10">
             {data.map((item: any, idx: number) => (
@@ -30,11 +28,11 @@ export function OurLoveStory(props: IProps) {
                 key={idx}
               >
                 <Image
-                  src="/assets/story6.png"
+                  src={item.image}
                   alt="notes-img"
                   width={350}
                   height={350}
-                  className="rounded-l-md"
+                  className="rounded-t-md md:rounded-l-md"
                 />
                 <div className="px-4 py-5">
                   <h5 className="font-semibold">{item.title}</h5>

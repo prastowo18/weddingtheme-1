@@ -25,9 +25,7 @@ export function ShareLove(props: any) {
         >
           <SectionTitle
             title="Share Love"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ea
-          similique voluptatem itaque, a excepturi omnis inventore aliquam
-          exercitationem corporis rerum soluta."
+            desc="Tanpa mengurangi rasa hormat kami, bagi tamu undangan yang ingin memberikan hadiah berupa angpau online maupun hadiah fisik dapat mengirimkannya di:"
             textWhite
           />
 
@@ -72,17 +70,10 @@ export function ShareLove(props: any) {
           </div>
 
           {/* Share Gift */}
-          <div className="flex flex-col w-full gap-2 py-24 text-center md:w-2/3">
+          <div className="flex flex-col w-full gap-2 py-10 text-center md:py-24 md:w-2/3">
             <h4 className={`${mrDehaviland.className} text-5xl md:text-6xl`}>
               Share Gift
             </h4>
-            <div className="">
-              <p className="text-base font-light lg:px-20">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ea
-                similique voluptatem itaque, a excepturi omnis inventore aliquam
-                exercitationem corporis rerum soluta.
-              </p>
-            </div>
 
             <div className="flex flex-col items-center w-full gap-3 px-5 mx-auto mt-10 bg-white rounded-md shadow-md md:w-2/3 lg:flex-row py-7">
               <div className="w-2/3">

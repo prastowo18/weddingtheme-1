@@ -61,9 +61,7 @@ export function GuestBook() {
           <SectionTitle
             withImg
             title="Guest Book"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-          laborum voluptatum animi rerum alias nulla architecto unde
-          asperiores accusamus doloremque?"
+            desc="Silahkan konfirmasi untuk kedatangan."
           />
 
           {nameIsExsist ? null : (

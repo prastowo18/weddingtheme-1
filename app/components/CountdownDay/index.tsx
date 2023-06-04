@@ -34,15 +34,10 @@ export function CountdownDay(props: any) {
                 className="mx-auto"
               />
             </div>
-            <h4 className={`text-xl tracking-widest`}>Countdown To</h4>
+            <h4 className={`text-xl tracking-widest`}>Countdown to</h4>
             <h4 className={` text-4xl md:text-5xl tracking-widest`}>
               Our Happy Day
             </h4>
-            <p className="mt-2 text-sm font-light md:text-lg lg:px-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              laborum voluptatum animi rerum alias nulla architecto unde
-              asperiores accusamus doloremque?
-            </p>
 
             {/* Countdown Time */}
             <CountdownTimer targetDate={weedingDate} />
@@ -66,9 +61,10 @@ export function CountdownDay(props: any) {
                       Wedding Day
                     </h1>
                     <p className="max-w-3xl mt-1 text-xs text-gray-300 md:text-sm md:mt-3">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Officiis incidunt vitae facere corrupti facilis saepe
-                      error eius? Voluptatum, assumenda inventore.
+                      Assalamuallaikum Warohmatullahi Wabarakatuh, Puji Syukur
+                      atas kehadirat allah SWT yang telah menciptakan makhluknya
+                      berpasang-pasangan. Maka untuk itu ijinkanlah kami
+                      mengundang Anda dalam resepsi pernikahan putra putri kami.
                     </p>
                   </div>
                 </div>

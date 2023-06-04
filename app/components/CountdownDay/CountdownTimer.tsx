@@ -15,7 +15,7 @@ interface IPropsShowCounter {
 
 const Expired = () => {
   return (
-    <div className="flex flex-row justify-center w-full pb-20 text-2xl gap-7 md:text-4xl md:gap-28 mt-7">
+    <div className="flex flex-row justify-center w-full pb-10 text-2xl gap-7 md:text-4xl md:gap-28 mt-7">
       <DateTimeDisplay value={0} type={"Days"} />
       <DateTimeDisplay value={0} type={"Hours"} />
       <DateTimeDisplay value={0} type={"Minutes"} />

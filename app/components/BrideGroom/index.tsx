@@ -27,9 +27,7 @@ export function BrideGroom(props: any) {
             withTitleDesc
             title="Bride & Groom"
             titleDesc="The Beloved"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            laborum voluptatum animi rerum alias nulla architecto unde
-            asperiores accusamus doloremque?"
+            desc="Dengan memohon ridho serta rahmat dari Allah SWT, kami mengundang bapak/ibu/saudara/i berkenan hadir dalam pernikahan:"
           />
           <div className="grid w-full grid-cols-1 gap-10 py-20 md:grid-cols-2 md:px-10 lg:px-20">
             <div

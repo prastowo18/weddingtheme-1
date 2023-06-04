@@ -52,13 +52,13 @@ export default function Home() {
         name: "Zein",
         fullname: "Muhammad Zein",
         desc: "Bapak M.Sjahlan - Ibu Rosminah",
-        location: "Jakarta, Indonesia.",
+        location: "Bekasi, Indonesia.",
       },
       bride: {
         name: "Wiwi",
         fullname: "Wiwi Fitriani",
         desc: "Alm. Bapak Saepudin - Ibu Rusminah",
-        location: "Jakarta, Indonesia.",
+        location: "Bekasi, Indonesia.",
       },
     },
     countdown: {
@@ -86,21 +86,21 @@ export default function Home() {
     },
     our_love_story: [
       {
-        image: "",
+        image: "/assets/story2.png",
         title: "Awal Bertemu",
         date: "Juli 2022",
         story:
           "Awal kami bertemu pada bulan Juli. Untuk mulai mengobrol pada bulan Agustus. Dibulan berikutnya kami mulai Chat melalui Wathsapps dan mulai pendekatan bertukar cerita satu sama lain. Sampai akhirnya kami memutuskan ke tahap yang serius.",
       },
       {
-        image: "",
+        image: "/assets/story2.png",
         title: "Mulai Berkomitmen",
         date: "Oktober 2022",
         story:
           "Pada bulan Oktober Zein mulai mengungkapkan maksud dan tujuan kelanjutan hubungan kami. Pada bulan Maret Zein membawa keluarganya untuk bersilaturahmi dan melamar saya sebagai pendamping hidupnya selamanya.",
       },
       {
-        image: "",
+        image: "/assets/story2.png",
         title: "Menikah",
         date: "Juli 2023",
         story:
