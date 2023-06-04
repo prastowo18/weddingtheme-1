@@ -90,17 +90,17 @@ export default function Home() {
         title: "Awal Bertemu",
         date: "Juli 2022",
         story:
-          "Awal kami bertemu pada bulan Juli. Untuk mulai mengobrol pada bulan Agustus. Dibulan berikutnya kami mulai Chat melalui Wathsapps dan mulai pendekatan bertukar cerita satu sama lain. Sampai akhirnya kami memutuskan ke tahap yang serius.",
+          "Awal kami bertemu pada bulan Juli. Untuk mulai mengobrol pada bulan Agustus. Di bulan berikutnya kami mulai chat melalui WhatsApp dan mulai pendekatan bertukar cerita satu sama lain. Sampai akhirnya kami memutuskan ke tahap yang serius.",
       },
       {
-        image: "/assets/story2.png",
+        image: "/assets/story1.png",
         title: "Mulai Berkomitmen",
         date: "Oktober 2022",
         story:
           "Pada bulan Oktober Zein mulai mengungkapkan maksud dan tujuan kelanjutan hubungan kami. Pada bulan Maret Zein membawa keluarganya untuk bersilaturahmi dan melamar saya sebagai pendamping hidupnya selamanya.",
       },
       {
-        image: "/assets/story2.png",
+        image: "/assets/story3.png",
         title: "Menikah",
         date: "Juli 2023",
         story:

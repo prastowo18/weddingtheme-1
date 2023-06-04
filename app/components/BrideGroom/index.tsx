@@ -20,7 +20,7 @@ export function BrideGroom(props: any) {
       <>
         <section
           id="notes"
-          className="flex flex-col items-center w-full pt-5 px-7 lg:px-28 lg:pb-28"
+          className="flex flex-col items-center w-full px-10 pt-5 lg:px-28 lg:pb-28"
         >
           <SectionTitle
             withImg
@@ -31,7 +31,7 @@ export function BrideGroom(props: any) {
           />
           <div className="grid w-full grid-cols-1 gap-10 py-20 md:grid-cols-2 md:px-10 lg:px-20">
             <div
-              className="flex flex-col items-center justify-center gap-5 px-5"
+              className="flex flex-col items-center justify-center gap-5 px-2"
               data-aos="zoom-in"
             >
               <div className="">
@@ -43,7 +43,7 @@ export function BrideGroom(props: any) {
                   className="rounded-full shadow-lg"
                 />
               </div>
-              <div className="p-5 text-center">
+              <div className="py-5 text-center">
                 <h4 className={`${mrDehaviland.className} text-5xl mb-2`}>
                   {data.groom.name}
                 </h4>
@@ -59,7 +59,7 @@ export function BrideGroom(props: any) {
               </div>
             </div>
             <div
-              className="flex flex-col items-center justify-center gap-5 px-5"
+              className="flex flex-col items-center justify-center gap-5 px-2"
               data-aos="zoom-in"
               data-aos-delay="300"
             >
@@ -72,7 +72,7 @@ export function BrideGroom(props: any) {
                   className="rounded-full shadow-lg"
                 />
               </div>
-              <div className="p-5 text-center">
+              <div className="py-5 text-center">
                 <h4 className={`${mrDehaviland.className} text-5xl mb-2`}>
                   {data.bride.name}
                 </h4>

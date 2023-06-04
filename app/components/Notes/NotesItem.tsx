@@ -14,16 +14,16 @@ export function NotesItem(props: IProps) {
   const renderMain = useMemo(() => {
     return (
       <div className="flex flex-col items-center justify-center gap-5 md:text-center">
-        <div className="hidden md:block">
+        <div className="">
           <Image
             src={src}
             alt={alt}
-            width={100}
-            height={100}
-            className="w-1/2 mx-auto"
+            className="mx-auto"
+            width={50}
+            height={50}
           />
         </div>
-        <div className="md:px-3 lg:px-10 md:pb-10">
+        <div className="text-center md:px-3 lg:px-10 md:pb-10">
           <h5 className="mb-1 text-sm font-semibold tracking-wide">{title}</h5>
           <p className="text-sm font-light">{desc}</p>
         </div>

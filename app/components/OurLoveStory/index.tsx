@@ -27,14 +27,16 @@ export function OurLoveStory(props: IProps) {
                 className="flex flex-col items-center justify-center gap-5 mb-8 rounded-md shadow-md md:flex-row"
                 key={idx}
               >
-                <Image
-                  src={item.image}
-                  alt="notes-img"
-                  width={350}
-                  height={350}
-                  className="rounded-t-md md:rounded-l-md"
-                />
-                <div className="px-4 py-5">
+                <div className="w-full rounded-t-md md:w-1/3 md:rounded-l-md">
+                  <Image
+                    src={item.image}
+                    alt="notes-img"
+                    width={350}
+                    height={350}
+                    className="w-full rounded-t-md md:rounded-l-md"
+                  />
+                </div>
+                <div className="px-4 py-5 md:w-3/4">
                   <h5 className="font-semibold">{item.title}</h5>
                   <h5 className="mb-3 text-sm">{item.date}</h5>
                   <p className="text-sm font-light">{item.story}</p>

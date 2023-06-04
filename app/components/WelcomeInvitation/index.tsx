@@ -10,11 +10,11 @@ const gabriela = Gabriela({
 
 interface IProps {
   toggleWelcomeInvitation: () => void;
-  data: any
+  data: any;
 }
 export function WelcomeInvitation(props: IProps) {
   const searchParams = useSearchParams();
-  const paramsName = searchParams.get('name');
+  const paramsName = searchParams.get("name");
   const { toggleWelcomeInvitation, data } = props;
   const renderMain = useMemo(() => {
     return (
@@ -36,7 +36,7 @@ export function WelcomeInvitation(props: IProps) {
                 className=""
               />
               <h2 className="px-2 text-base text-white">
-                Hello, We Are Getting Married Save The Date
+                Hello, We Are Getting Married Save the Date
               </h2>
               <div className="">
                 <h1
@@ -47,7 +47,7 @@ export function WelcomeInvitation(props: IProps) {
                 <h2 className="text-lg text-white">{data.date}</h2>
               </div>
               <div className="">
-                <h2 className="text-base italic text-white">Dear</h2>
+                <h2 className="text-base italic text-white">Dear,</h2>
                 <h1
                   className={`text-xl font-semibold text-white ${gabriela.className}`}
                 >
