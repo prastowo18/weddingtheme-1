@@ -70,12 +70,13 @@ export function ShareLove(props: any) {
           </div>
 
           {/* Share Gift */}
-          <div className="flex flex-col w-full gap-2 py-10 text-center md:py-24 md:w-2/3">
-            <h4 className={`${mrDehaviland.className} text-5xl md:text-6xl`}>
-              Share Gift
-            </h4>
-
-            <div className="flex flex-col items-center w-full gap-3 px-5 mx-auto mt-10 bg-white rounded-md shadow-md md:w-2/3 lg:flex-row py-7">
+          <SectionTitle
+            title="Share Gift"
+            desc=""
+            textWhite
+          />
+          <div className="flex flex-col w-full gap-2 py-10 pt-3 text-center md:pb-24 md:pt-0 md:w-2/3">
+            <div className="flex flex-col items-center w-full gap-3 px-5 mx-auto mt-0 bg-white rounded-md shadow-md md:w-2/3 lg:flex-row py-7">
               <div className="w-2/3">
                 <Image
                   src="/assets/map.png"
