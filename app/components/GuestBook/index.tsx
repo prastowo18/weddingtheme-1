@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 
 export function GuestBook() {
   const searchParams = useSearchParams();
-  const paramsName = searchParams.get("name");
+  const paramsName = searchParams.get("to");
   const mutation = useCeateList();
   const dataTable = useGetList();
   const { data, isError, isFetching, isLoading, refetch } = dataTable;
@@ -79,7 +79,7 @@ export function GuestBook() {
                   type="text"
                   disabled
                   value={paramsName ?? ""}
-                  // placeholder="Nama"
+                // placeholder="Nama"
                 />
               </div>
               <div className="">
@@ -115,7 +115,7 @@ export function GuestBook() {
                     id="nama"
                     type="number"
                     {...register("jumlah", {})}
-                    // placeholder="Nama"
+                  // placeholder="Nama"
                   />
                 </div>
               </div>
@@ -127,7 +127,7 @@ export function GuestBook() {
                   className="w-full h-32 px-3 py-2 leading-tight border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                   id="nama"
                   {...register("ucapan", {})}
-                  // placeholder="Nama"
+                // placeholder="Nama"
                 />
               </div>
               {loading ? (
@@ -187,9 +187,8 @@ export function GuestBook() {
               </div>
             ) : (
               <div
-                className={`relative flex flex-col w-full mx-auto overflow-y-auto ${
-                  nameIsExsist ? "h-90" : "h-72"
-                } scrollbar-thin scrollbar-thumb-[#9AA977]/60 scrollbar-track-[#9AA977]/30 px-2`}
+                className={`relative flex flex-col w-full mx-auto overflow-y-auto ${nameIsExsist ? "h-90" : "h-72"
+                  } scrollbar-thin scrollbar-thumb-[#9AA977]/60 scrollbar-track-[#9AA977]/30 px-2`}
               >
                 {data?.data.map((item: any, idx: number) => (
                   <div className="pb-5" key={idx}>
@@ -197,9 +196,8 @@ export function GuestBook() {
                       <div className="flex flex-col md:gap-3 md:flex-row md:items-center">
                         <p className="text-sm font-semibold">{item.nama}</p>
                         <div
-                          className={`text-xs font-semibold ${
-                            item.kedatangan ? "text-green-500" : "text-red-500"
-                          }  md:px-4 md:py-1 md:text-center md:bg-white md:rounded-full`}
+                          className={`text-xs font-semibold ${item.kedatangan ? "text-green-500" : "text-red-500"
+                            }  md:px-4 md:py-1 md:text-center md:bg-white md:rounded-full`}
                         >
                           {item.kedatangan ? "Hadir" : "Tidak Hadir"}
                         </div>

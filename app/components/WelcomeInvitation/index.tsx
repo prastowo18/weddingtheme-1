@@ -14,7 +14,7 @@ interface IProps {
 }
 export function WelcomeInvitation(props: IProps) {
   const searchParams = useSearchParams();
-  const paramsName = searchParams.get("name");
+  const paramsName = searchParams.get("to");
   const { toggleWelcomeInvitation, data } = props;
   const renderMain = useMemo(() => {
     return (
