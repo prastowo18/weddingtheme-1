@@ -25,7 +25,8 @@ export function OurLoveStory(props: IProps) {
             {data.map((item: any, idx: number) => (
               <div
                 className="flex flex-col items-center justify-center gap-5 mb-8 rounded-md shadow-md md:flex-row"
-                key={idx} data-aos={idx % 2 == 0 ? "fade-right" : "fade-left"} data-aos-duration="2000"
+                key={idx}
+                data-aos="fade-right" data-aos-duration="2000"
               >
                 <div className="w-full rounded-t-md md:w-1/3 md:rounded-l-md">
                   <Image
